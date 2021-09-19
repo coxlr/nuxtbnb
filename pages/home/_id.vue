@@ -5,7 +5,7 @@
     <PropertyDescription :home="home"/>
     <PropertyMap :home="home"/>
     <PropertyReviews :reviews="reviews"/>
-    <PropertyHost :user="user"/>    
+    <PropertyHost :user="user"/>
     <script type="application/ld+json" v-html="getSchema"></script>
 </div>
 </template>
@@ -40,8 +40,7 @@ export default {
                 { hid: 'og-type', property: 'og:type', content: 'website'},
                 { hid: 'og-title', property: 'og:title', content: this.home.title },
                 { hid: 'og-desc', property: 'og:description', content: this.home.description },
-                { hid: 'og-image', property: 'og:image', 
-                  content: this.$img(this.home.images[0], {width:1200}, { provider: 'cloudinary '})},
+                { hid: 'og-image', property: 'og:image', content: this.$img(this.home.images[0], {width:1200}, { provider: 'cloudinary '})},
                 { hid: 'og-url', property: 'og:url', content: `${this.$config.rootUrl}/home/${this.home.objectID}`}
             ]                   
         }
