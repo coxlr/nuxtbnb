@@ -17,8 +17,6 @@ export default function({ $config }, inject){
     }
 
     function initStripe(){
-        console.log('STRIPE',$config.stripe.key);
-        console.log('STRIPE',$config.stripe.secretKey);
         stripe = window.Stripe($config.stripe.key)
     }
 
