@@ -19,11 +19,9 @@ export default function() {
         const idToken = cookie.parse(req.headers.cookie)[authConfig.cookieName]
         if(!idToken) return rejectHit(res)
 
-        console.log(req.originalUrl)
-        console.log(idToken)
         const ticket = await getUser(idToken)
         if(!ticket) return rejectHit(res)
-        console.log(ticket)
+
         req.identity = {
             id: ticket.sub,
             email: ticket.email,
