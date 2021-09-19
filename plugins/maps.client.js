@@ -1,4 +1,4 @@
-export default function({ $config: { maps } , context}, inject){
+export default function({ $config: { maps }}, inject){
     let isLoaded = false
     let waiting = []
     
